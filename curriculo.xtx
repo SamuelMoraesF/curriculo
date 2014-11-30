@@ -20,6 +20,29 @@
 
 \documentclass[]{curriculo}
 
+\usepackage[portuguese,english]{babel}
+
+%% Required package.
+\usepackage{ifthen}
+
+%% TeX function that generates the language commands.
+\def\localedef#1#2{
+\ifthenelse{ \equal{\locale}{#1} }{
+  \selectlanguage{#2}
+  \expandafter\def\csname#1\endcsname ##1{##1}
+  }{
+  \expandafter\def\csname#1\endcsname ##1{}
+  }
+}
+
+%% Selected language. Can be placed anywhere before the language commands.
+\providecommand\locale{en}
+
+%% Language commands.
+\localedef{en}{english}
+\localedef{br}{portuguese}
+%% ...
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,18 +73,18 @@
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Education} 
+\section{\en{Education}\br{Educação}} 
 
-\subsection{Thomás Fortes School}
-\descript{High School}
-\location{Expected End at Dec 2015 | Santiago, RS - Brazil}
+\subsection{\en{Thomás Fortes School}\br{Escola Thomás Fortes}}
+\descript{\en{High School}\br{Ensino Médio}}
+\location{\en{Estimated End at Dec 2015 | Santiago, RS - Brazil}\br{Término estimado em Dez 2015 | Santiago, RS - Brazil}}
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     LINKS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Links} 
+\section{\en{Links}\br{Ligações}} 
 Github:// \href{https://github.com/samuelmoraesf}{\bf SamuelMoraesF}
 \sectionsep
 
@@ -69,14 +92,15 @@ Github:// \href{https://github.com/samuelmoraesf}{\bf SamuelMoraesF}
 %     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Skills}
-\location{Programming:}
-Shell \textbullet{} Python \textbullet{} Javascript \textbullet{} SQL \textbullet{} PHP
-\location{Website Development:}
-JQuery \textbullet{} CSS3 \textbullet{} HTML5 \textbullet{} Ajax \\
-Wordpress \textbullet{} Node.JS \textbullet{} WebGL \textbullet{} SVG
-\location{Others:}
-SysAdmin \textbullet{} MySQL \textbullet{} FirefoxOS \textbullet{} CPanel/WHM \textbullet{} Client Support \textbullet{} Marketing
+\section{\en{Skills}\br{Habilidades}}
+\location{\en{Programming:}\br{Programação:}}
+\en{Shell \textbullet{} Python \textbullet{} Javascript \textbullet{} SQL \textbullet{} PHP}\br{Shell \textbullet{} Python \textbullet{} Javascript \textbullet{} SQL \textbullet{} PHP}
+\location{\en{Website Development:}\br{Desenvolvimento de Websites:}}
+\en{JQuery \textbullet{} CSS3 \textbullet{} HTML5 \textbullet{} Ajax \\
+Wordpress \textbullet{} Node.JS \textbullet{} WebGL \textbullet{} SVG}\br{JQuery \textbullet{} CSS3 \textbullet{} HTML5 \textbullet{} Ajax \\
+Wordpress \textbullet{} Node.JS \textbullet{} WebGL \textbullet{} SVG}
+\location{\en{Others:}\br{Outras:}}
+\en{SysAdmin \textbullet{} MySQL \textbullet{} FirefoxOS \textbullet{} CPanel/WHM \textbullet{} Marketing}\br{SysAdmin \textbullet{} MySQL \textbullet{} FirefoxOS \textbullet{} CPanel/WHM \textbullet{} Marketing}
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,8 +117,9 @@ SysAdmin \textbullet{} MySQL \textbullet{} FirefoxOS \textbullet{} CPanel/WHM \t
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Experience}
+\section{\en{Experience}\br{Experiência}}
 
+\en{
 \runsubsection{Parceria Informática}
 \descript{| Developer + SysAdmin }
 \location{May 2013 – November 2013 | Santiago, RS}
@@ -103,11 +128,26 @@ SysAdmin \textbullet{} MySQL \textbullet{} FirefoxOS \textbullet{} CPanel/WHM \t
 \item Development of the Main Site
 \item Development and Management of the Online Store
 \item Development of the Remote Support System
-\item GNU/Linux Support
-\item Server Management and Setup
+\item Management and Setup of the Enterprise Server
 \end{tightemize}
 \sectionsep
+}
 
+\br{
+\runsubsection{Parceria Informática}
+\descript{| Desenvolvedor + SysAdmin }
+\location{Maio 2013 – Novembro 2013 | Santiago, RS}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Desenvolvimento do Site Principal
+\item Desenvolvimento e Manutenção da Loja Online
+\item Desenvolvimento do Sistema de Suporte Remoto
+\item Instalação e Manutenção do Servidor da Empresa
+\end{tightemize}
+\sectionsep
+}
+
+\en{
 \runsubsection{CubeKode}
 \descript{| CEO }
 \location{January 2014 - Currently | Santiago, RS}
@@ -115,11 +155,25 @@ SysAdmin \textbullet{} MySQL \textbullet{} FirefoxOS \textbullet{} CPanel/WHM \t
 \begin{tightemize}
 \item Setup, Management, Development of all services
 \item Marketing
-\item DC Management
 \item Client Support
 \end{tightemize}
 \sectionsep
+}
 
+\br{
+\runsubsection{CubeKode}
+\descript{| CEO }
+\location{Janeiro 2014 - Atualmente | Santiago, RS}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Instalação, Manutenção, Desenvolvimento de todos os serviços
+\item Marketing
+\item Suporte de Usuários
+\end{tightemize}
+\sectionsep
+}
+
+\en{
 \runsubsection{Mozilla}
 \descript{| Volunteer }
 \location{January 2013 - Currently}
@@ -128,11 +182,28 @@ SysAdmin \textbullet{} MySQL \textbullet{} FirefoxOS \textbullet{} CPanel/WHM \t
 \item Development and Management of the IRC bot "amador"
 \item Setup and Management of the community servers
 \item Website development
-\item Translation of some products/services/tools (like whatcanidoformozilla.org, Gaia and Mozilla Webmaker, group work with other volunteers)
-\item Organization and lectures in some events like Latinoware, FISL, FLISOL, Forum TcheLinux and anothers FOSS events.
+\item Translation of some products/services/tools (like whatcanidoformozilla.org, Gaia and Mozilla Webmaker)
+\item Organization and lectures in some events like Latinoware, FISL, FLISOL, Forums TcheLinux and anothers FOSS events.
 \end{tightemize}
 \sectionsep
+}
 
+\br{
+\runsubsection{Mozilla}
+\descript{| Voluntário }
+\location{Janeiro 2013 - Atualmente}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Desenvolvimento e Manutenção do bot para IRC "amador"
+\item Instalação e Configuração dos servidores da comunidade
+\item Desenvolvimento de Websites
+\item Tradução de alguns produtos/serviços/ferramentas (como o whatcanidoformozilla.org, Gaia e o Mozilla Webmaker)
+\item Organização e palestras em alguns evento como Latinoware, FISL, FLISOL, Fóruns TcheLinux and anothers FOSS events.
+\end{tightemize}
+\sectionsep
+}
+
+\en{
 \runsubsection{TchêLinux}
 \descript{| Volunteer }
 \location{June 2012 - Currently}
@@ -140,9 +211,23 @@ SysAdmin \textbullet{} MySQL \textbullet{} FirefoxOS \textbullet{} CPanel/WHM \t
 \begin{tightemize}
 \item Development and Management of the main site
 \item Setup and Management of the community server
-\item Organization and lectures in some events like Latinoware, FISL, FLISOL, Forum TcheLinux and anothers FOSS events.
+\item Organization and lectures in some events like Latinoware, FISL, FLISOL, Forums TcheLinux and anothers FOSS events.
 \end{tightemize}
 \sectionsep
+}
+
+\br{
+\runsubsection{TchêLinux}
+\descript{| Voluntário }
+\location{Junho 2012 - Atualmente}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Desenvolvimento e Manutenção do Site Principal.
+\item Instalação e Manutenção do Servidor da Comunidade
+\item Organização e palestras em alguns evento como Latinoware, FISL, FLISOL, Fóruns TcheLinux and anothers FOSS events.
+\end{tightemize}
+\sectionsep
+}
 
 \end{minipage} 
 \end{document}  \documentclass[]{article}
