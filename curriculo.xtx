@@ -1,0 +1,148 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{curriculo}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Samuel}{Moraes}{ \urlstyle{same}\url{http://samuelmoraes.com} \\
+\href{mailto:contato@samuelmoraes.com}{contato@samuelmoraes.com} | 55 9913 9802
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Thomás Fortes School}
+\descript{High School}
+\location{Expected End at Dec 2015 | Santiago, RS - Brazil}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/samuelmoraesf}{\bf SamuelMoraesF}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\location{Programming:}
+Shell \textbullet{} Python \textbullet{} Javascript \textbullet{} SQL \textbullet{} PHP
+\location{Website Development:}
+JQuery \textbullet{} CSS3 \textbullet{} HTML5 \textbullet{} Ajax \\
+Wordpress \textbullet{} Node.JS \textbullet{} WebGL \textbullet{} SVG
+\location{Others:}
+SysAdmin \textbullet{} MySQL \textbullet{} FirefoxOS \textbullet{} CPanel/WHM \textbullet{} Client Support \textbullet{} Marketing
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Parceria Informática}
+\descript{| Developer + SysAdmin }
+\location{May 2013 – November 2013 | Santiago, RS}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Development of the Main Site
+\item Development and Management of the Online Store
+\item Development of the Remote Support System
+\item GNU/Linux Support
+\item Server Management and Setup
+\end{tightemize}
+\sectionsep
+
+\runsubsection{CubeKode}
+\descript{| CEO }
+\location{January 2014 - Currently | Santiago, RS}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Setup, Management, Development of all services
+\item Marketing
+\item DC Management
+\item Client Support
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Mozilla}
+\descript{| Volunteer }
+\location{January 2013 - Currently}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Development and Management of the IRC bot "amador"
+\item Setup and Management of the community servers
+\item Website development
+\item Translation of some products/services/tools (like whatcanidoformozilla.org, Gaia and Mozilla Webmaker, group work with other volunteers)
+\item Organization and lectures in some events like Latinoware, FISL, FLISOL, Forum TcheLinux and anothers FOSS events.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{TchêLinux}
+\descript{| Volunteer }
+\location{June 2012 - Currently}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Development and Management of the main site
+\item Setup and Management of the community server
+\item Organization and lectures in some events like Latinoware, FISL, FLISOL, Forum TcheLinux and anothers FOSS events.
+\end{tightemize}
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
